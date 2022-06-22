@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
+    background: url(../media/google.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-color: #502E78;
     font-family: 'Roboto', sans-serif;
 }
@@ -16,15 +21,55 @@ body {
     list-style: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .navitem {
-    margin: 10px;
+    margin: 0 8px;
+
 }
 
 .navitem > a {
     text-decoration: none;
     color: #ffffff;
+    font-size: 0.8rem;
+}
+
+.underline:hover {
+    text-decoration: underline;
+}
+
+#app-launcher {
+    /* border: black 1px solid; */
+    border-radius: 50%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#app-launcher:hover {
+    background-color: rgba( 255, 255, 255, 0.1);
+}
+
+i {
+    margin: 0 1px;
+    font-size: 1.2rem;
+    /* margin-top: 3px; */
+    line-height: 10px;
+}
+
+#profile {
+    background-color: white;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+a > img {
+    border-radius: 50%;
+    height: 100%;
 }
 
 /* Styling the logo */
