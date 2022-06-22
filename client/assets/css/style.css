@@ -73,13 +73,43 @@ a > img {
     height: 100%;
 }
 
+/* Positioning section divs */
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Styling the logo */
 
 .logo {
    display: flex;
    justify-content: center;
    align-items: center;
-   position: relative;
-   bottom: -90px;
+   /* position: relative; */
+   /* bottom: -90px; */
 }
 
+/* Styling search bar */
+
+.searchBar {
+    background-color: #ffffff;
+    /* position: relative; */
+}
+
+/* style for buttons */
+.search, .lucky {
+    padding:10px 12px;
+    background-color: transparent;
+    color:white;
+}
+
+.search:hover , .lucky:hover {
+    background-color: black;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
