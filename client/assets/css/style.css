@@ -8,6 +8,7 @@ body {
     background-size: cover;
     background-color: #502E78;
     font-family: 'Roboto', sans-serif;
+    height: 100vh;
 }
 
 /* Styling the navigation bar */
@@ -78,7 +79,8 @@ a > img {
 .main {
     display: flex;
     flex-direction: column;
-
+    /* justify-content: center; */
+    height: 100%;
 }
 
 /* Styling the logo */
@@ -87,6 +89,7 @@ a > img {
    display: flex;
    justify-content: center;
    align-items: center;
+   margin-top: 6rem;
 }
 
 /* Styling search bar */
@@ -95,12 +98,13 @@ a > img {
     /* background-color: #ffffff; */
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .searchBar > form {
     background-color: #ffffff;
-    height: 50px;
-    min-width: 500px;
+    height: 45px;
+    min-width: 560px;
     border-radius: 25px;
     display: flex;
     align-items: center;
@@ -130,11 +134,26 @@ button[type=submit] > i {
     font-size: 0.9rem;
 }
 
+/* Styling buttons */
+
+.buttons {
+    margin-top: 1rem;
+}
+
 .search, .lucky {
-    padding:10px 12px;
-    background-color: transparent;
+    padding:12px 12px;
+    background-color: rgba( 0, 0, 0, 0.3);
     color:white;
     border-radius: 3px;
+    border: solid 1px #000000;
+}
+
+.search {
+    margin-right: 5px;
+}
+
+.lucky {
+    margin-left: 5px;
 }
 
 .search:hover , .lucky:hover {
