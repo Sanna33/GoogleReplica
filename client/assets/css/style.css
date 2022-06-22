@@ -134,11 +134,16 @@ button[type=submit] > i {
     padding:10px 12px;
     background-color: transparent;
     color:white;
+    border-radius: 3px;
 }
 
 .search:hover , .lucky:hover {
     background-color: black;
 }
 
+.btn {
+    display: flex;
+    justify-content: center;
+}
 
 
