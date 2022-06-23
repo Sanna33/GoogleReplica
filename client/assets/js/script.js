@@ -24,8 +24,25 @@ const getRandomQuery = async () => {
     const resp = await fetch('http://localhost/queries/random');
     const rData = await resp.json();
     
-    queries.innerHTML = `<a target="_blank" class="r-link" href="${rData.urllink}">${rData.name}</a>`;
+    // queries.innerHTML = `<a target="_blank" class="r-link" href="${rData.urllink}">${rData.name}</a>`;
+    location.href = rData.urllink;
 }
+
+queries.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const text = document.getElementById('text');
+    const search = text.value;
+
+    const response = await fetch('http://localhost/queries/');
+    const resData = await response.json();
+
+    for (object of resData) {
+        if (object.name === search) {
+            queries.innerHTML = `<a target="_blank" class="s-link" href="${object.urllink}">${object.name}</a>`
+        }
+    }
+} )
 
 button.addEventListener('click', () => {
     getQueries().catch(err => console.log(err));
