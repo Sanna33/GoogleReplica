@@ -37,6 +37,15 @@ queries.addEventListener('submit', async (e) => {
     const response = await fetch('http://localhost/queries/');
     const resData = await response.json();
 
+    /**
+     * Tried to make for loop go through each array element 
+     * and then check if the objects contain name === text.value.
+     * and if it doesn't change for a brief moment the placeholder 
+     * to notify user that there isn't a result for search.
+     * But because it is looping through the array and finding array 
+     * objects that don't match the search, the else statement is 
+     * activated, even when search is within the data for the queries. 
+     */
     for (object of resData) {
         if (object.name === search) {
             // queries.innerHTML = `<a target="_blank" class="s-link" href="${object.urllink}">${object.name}</a>`
