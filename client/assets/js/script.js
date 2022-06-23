@@ -40,9 +40,11 @@ queries.addEventListener('submit', async (e) => {
     for (object of resData) {
         if (object.name === search) {
             // queries.innerHTML = `<a target="_blank" class="s-link" href="${object.urllink}">${object.name}</a>`
+            console.log(1);
             location.href = object.urllink;
         } else {
-            text.value = ""
+            console.log(2);
+            text.value = "";
             text.placeholder = "No result for this search :(";
             setTimeout(() => {
                 text.placeholder = "Search Google or type a URL";
