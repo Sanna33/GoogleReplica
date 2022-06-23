@@ -39,7 +39,14 @@ queries.addEventListener('submit', async (e) => {
 
     for (object of resData) {
         if (object.name === search) {
-            queries.innerHTML = `<a target="_blank" class="s-link" href="${object.urllink}">${object.name}</a>`
+            // queries.innerHTML = `<a target="_blank" class="s-link" href="${object.urllink}">${object.name}</a>`
+            location.href = object.urllink;
+        } else {
+            text.value = ""
+            text.placeholder = "No result for this search :(";
+            setTimeout(() => {
+                text.placeholder = "Search Google or type a URL";
+            }, 1000);
         }
     }
 } )
