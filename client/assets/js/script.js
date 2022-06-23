@@ -13,7 +13,7 @@ const getQueries = async () => {
     const unList = document.getElementById('s-list');
     for (query of qData) {
         let li = document.createElement('li');
-        li.innerHTML = `<a class="s-link" href="${query.urllink}">${query.name}</a>`;
+        li.innerHTML = `<a target="_blank" class="s-link" href="${query.urllink}">${query.name}</a>`;
         // console.log(li);
         unList.appendChild(li);
     }
@@ -24,7 +24,7 @@ const getRandomQuery = async () => {
     const resp = await fetch('http://localhost/queries/random');
     const rData = await resp.json();
     
-    queries.innerHTML = `<a class="r-link" href="${rData.urllink}">${rData.name}</a>`;
+    queries.innerHTML = `<a target="_blank" class="r-link" href="${rData.urllink}">${rData.name}</a>`;
 }
 
 button.addEventListener('click', () => {
