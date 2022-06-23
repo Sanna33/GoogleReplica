@@ -1,9 +1,10 @@
 let button = document.getElementsByClassName('search')[0];
+let btnLucky = document.getElementsByClassName('lucky')[0];
+const queries = document.getElementById('application');
 
-const getQuery = async () => {
+const getQueries = async () => {
     const res = await fetch('http://localhost/queries/');
     const qData = await res.json();
-    const queries = document.getElementById('application');
     
     queries.innerHTML = 
     `<ul id="s-list">
@@ -19,8 +20,19 @@ const getQuery = async () => {
     // queries.innerHTML = `<a class="s-link" href="${qData.urllink}">${qData.name}</a>`;
 }
 
+const getRandomQuery = async () => {
+    const resp = await fetch('http://localhost/queries/random');
+    const rData = await resp.json();
+    
+    queries.innerHTML = `<a class="s-link" href="${rData.urllink}">${rData.name}</a>`;
+}
+
 button.addEventListener('click', () => {
-    getQuery().catch(err => console.log(err))
+    getQueries().catch(err => console.log(err));
+})
+
+btnLucky.addEventListener('click', () => {
+    getRandomQuery().catch(err => console.log(err));
 })
 
 

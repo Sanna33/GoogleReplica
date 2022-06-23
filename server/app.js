@@ -29,13 +29,18 @@ app.get('/queries', (req, res) => {
     res.send(queries)
 })
 
-app. get('/queries/:id', (req, res) => {
-    const id = req.params.id - 1;
-    if ( id < queries.length) {
-        res.send(queries[id]);
-    } else {
-        res.status(202).send('No result for this!')
-    }
+// app.get('/queries/:id', (req, res) => {
+//     const id = req.params.id - 1;
+//     if ( id < queries.length) {
+//         res.send(queries[id]);
+//     } else {
+//         res.status(202).send('No result for this!')
+//     }
+// })
+
+app.get('/queries/random', (req,res) => {
+    const random = Math.floor(Math.random() * 10)
+    res.send(queries[random]);
 })
 
 app.listen(80, function () {
