@@ -103,7 +103,7 @@ a > img {
 
 .searchBar > form {
     background-color: #ffffff;
-    height: 45px;
+    min-height: 45px;
     min-width: 560px;
     border-radius: 25px;
     display: flex;
@@ -117,7 +117,7 @@ form input[type=text] {
     margin: 0;
     padding: 0;
     width: 90%;
-    border-radius: 0 25px 25px 25px;
+    border-radius: 0 25px 25px 0;
     font-size: 1rem;
 }
 
@@ -125,7 +125,7 @@ form > button[type=submit] {
     border: none;
     width: 10%;
     height: 100%;
-    border-radius: 25px 0 25px 25px;
+    border-radius: 25px 0 0px 25px;
     background-color: #ffffff;
     color: #6f7075;
 }
@@ -163,6 +163,20 @@ button[type=submit] > i {
 .btn {
     display: flex;
     justify-content: center;
+}
+
+button {
+    -ms-user-select: contain;
+    cursor: pointer;
+}
+
+#s-list {
+    list-style: none;
+}
+
+.s-link {
+    margin-left: 10px;
+    color: #4285F3;
 }
 
 
