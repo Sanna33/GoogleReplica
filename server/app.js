@@ -41,3 +41,5 @@ app. get('/queries/:id', (req, res) => {
 app.listen(80, function () {
     console.log('CORS-enabled web server listening on port 80')
   })
+
+  //Maybe make more obvious that no port number is required to view the server data e.g. localhost/queries compared with localhost:3000/queries
