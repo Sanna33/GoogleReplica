@@ -24,7 +24,7 @@ const getRandomQuery = async () => {
     const resp = await fetch('http://localhost/queries/random');
     const rData = await resp.json();
     
-    queries.innerHTML = `<a class="s-link" href="${rData.urllink}">${rData.name}</a>`;
+    queries.innerHTML = `<a class="r-link" href="${rData.urllink}">${rData.name}</a>`;
 }
 
 button.addEventListener('click', () => {
