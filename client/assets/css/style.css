@@ -150,10 +150,12 @@ button[type=submit] > i {
 
 .search {
     margin-right: 5px;
+    background-color: rgba( 153, 28, 19, 0.3);
 }
 
 .lucky {
     margin-left: 5px;
+    background-color: rgba( 21, 78, 168, 0.3);
 }
 
 .search:hover , .lucky:hover {
