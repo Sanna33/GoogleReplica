@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors');
-// const port = 3000
+const port = 4000
 
 queries = [
     {id: 1, name: 'food', urllink: 'https://en.wikipedia.org/wiki/Food'},
@@ -43,6 +43,6 @@ app.get('/queries/random', (req,res) => {
     res.send(queries[random]);
 })
 
-app.listen(80, function () {
-    console.log('CORS-enabled web server listening on port 80')
+app.listen(200, function () {
+    console.log('CORS-enabled web server listening on port 200')
   })
