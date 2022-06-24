@@ -43,6 +43,6 @@ app.get('/queries/random', (req,res) => {
     res.send(queries[random]);
 })
 
-app.listen(200, function () {
-    console.log('CORS-enabled web server listening on port 200')
+app.listen(80, function () {
+    console.log('CORS-enabled web server listening on port 80')
   })
